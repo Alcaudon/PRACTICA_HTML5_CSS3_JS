@@ -2,14 +2,55 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-
     <link rel="stylesheet" type="text/css" href="./styles/style.css">
     <title>Luis Barriga</title>
 </head>
 <body>
     <header class="header">
-        <h1 class="title">Pagina personal</h1>
+        <h1 class="title">Curriculum Vitae</h1>
         <div class="title-img"></div>
     </header>
+
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li class="navbar-item active">
+                <a href>Inicio</a>
+            </li>
+            <li class="navbar-item">
+                <a href>Quien soy</a>
+            </li>
+            <li class="navbar-item">
+                <a href>Estudios</a>
+            </li>
+            <li class="navbar-item">
+                <a href>Experiencia</a>
+            </li>
+            <li class="navbar-item">
+                <a href>Sobre mi</a>
+            </li>
+            <li class="navbar-item">
+                <a href="contact.html">Contacto</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="about-me clearfix section-container">
+            <div class="batman-video">
+                <video width="550" height="300" controls>
+                    <source src="./video/batman.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="batman-info">
+                <h2>Quien soy</h2>
+                <strong>Batman: </strong>
+                <span class="batman-description">Actualmente</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        Luis Barriga &copy; 2017
+    </footer>
 </body>
 </html>
