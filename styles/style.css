@@ -4,6 +4,13 @@
     -moz-box-sizing: border-box;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    --main-text-color: #F7F7F7;
+    --secondary-text-color: #A4A4A4;
+}
+
 .header > .title-img {
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -11,3 +18,4 @@
     background-image: url(../images/imagen_portada.jpg);
     height: 100vh;
 }
+
