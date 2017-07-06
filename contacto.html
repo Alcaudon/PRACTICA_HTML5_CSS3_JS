@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Contacto</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <li class="navbar-item active">
+                    <a href>Inicio</a>
+                </li>
+                <li class="navbar-item">
+                    <a href>Quien soy</a>
+                </li>
+                <li class="navbar-item">
+                    <a href>Estudios</a>
+                </li>
+                <li class="navbar-item">
+                    <a href>Experiencia</a>
+                </li>
+                <li class="navbar-item">
+                    <a href>Sobre mi</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="contact.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <main class="container">
+            <section class="contact section-container">
+                <h2>Contacta conmigo</h2>
+
+                <div class="row">                    
+                    <div class="col-6">
+                        <div class="form">
+                            <form name="contacto" method="get">
+                                <div class="form-row">
+                                    <label for="nombre">Nombre:</label>
+                                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+
+                                    <label for="apellidos">Apellidos:</label>
+                                    <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+                                </div>
+
+                                <div class="form-row">
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" placeholder="name@company.com"
+                                    pattern="[A-Za-z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+" required>
+                                </div>
+
+                                <div class="form-row">
+                                    <div>Como me has conocido</div>
+                                    <label for="forma_conocer_1">Algien te ha hablado de mi</label>
+                                    <input type="radio" id="forma_conocer_1" name="forma_conocer" value="Algien te ha hablado de mi" required>
+
+                                    <label for="forma_conocer_2">En redes sociales</label>
+                                    <input type="radio" id="forma_conocer_2" name="forma_conocer" value="En redes sociales" required>
+
+                                    <label for="forma_conocer_3">En una charla</label>
+                                    <input type="radio" id="forma_conocer_3" name="forma_conocer" value="En una charla" required>
+
+                                    <label for="forma_conocer_4">Otro</label>
+                                    <input type="radio" id="forma_conocer_4" name="forma_conocer" value="Otro" required>
+                                </div>
+
+                                <div class="form-row">
+                                    <label for="telefono">Número de teléfono:</label>
+                                    <input type="number" id="telefono" name="telefono" required>
+                                </div>
+
+                                <div class="form-row">                                   
+                                    <textarea name="comentarios" rows="10" cols="40">Escribe aquí tus comentarios</textarea>
+                                </div>
+
+                                <div class="form-row">
+                                    <input type="submit" value="Enviar">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            Luis Barriga &copy; 2017
+        </footer>
+    </body>
+</html>
