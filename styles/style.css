@@ -1,4 +1,5 @@
 * {
+    font-family: 'Alegreya', serif;    
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -11,6 +12,7 @@ body {
     --secondary-text-color: #A4A4A4;
 }
 
+
 .header > .title-img {
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -19,3 +21,8 @@ body {
     height: 100vh;
 }
 
+.navbar > .navbar-list > .navbar-item {
+    font-family: 'Oswald', sans-serif;
+    display: inline-block;
+    font-size: 16px;
+}
