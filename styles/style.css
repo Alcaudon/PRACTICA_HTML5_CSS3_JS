@@ -21,8 +21,43 @@ body {
     height: 100vh;
 }
 
+clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+.navbar {
+    background-color: var(--main-text-color);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.navbar > .navbar-list {
+    list-style-type: none;
+    margin: 0;
+    float: right;
+    font-size: 0;
+}
+
 .navbar > .navbar-list > .navbar-item {
     font-family: 'Oswald', sans-serif;
     display: inline-block;
     font-size: 16px;
 }
+
+.navbar > .navbar-list > .navbar-item a {
+    padding: 20px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.9);
+    display: inline-block;
+    transition: all 0.5s linear;
+}
+
+.navbar > .navbar-list > .navbar-item.active a {
+    color: var(--main-text-color);
+    background-color: var(--secondary-text-color);
