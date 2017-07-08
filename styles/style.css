@@ -1,11 +1,11 @@
-* {
+* {  
     font-family: 'Alegreya', serif;    
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
 
-body {
+body {  
     margin: 0;
     padding: 0;
     --main-text-color: #F7F7F7;
@@ -86,11 +86,26 @@ body {
 
 .about-me > .me-photo {
     float: left;
-    max-width: 25%;
+    max-width: 35%;
     
 }
 
 .about-me > .personal-info {
     float: right;
-    max-width: 75%;
+    max-width: 65%;
+}
+
+.school-photo img {
+    height: 200px;
+    width: 200px;
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.studies-formation > .studies {
+    float: left;
+}
+
+.studies-formation > .formation {
+    float: right;
 }

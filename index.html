@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="./styles/style.css">
+    <link rel="stylesheet" type="text/css" href="./styles/grid.css">
     <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <title>Curriculum Vitae Luis Barriga</title>
@@ -41,7 +42,7 @@
     <main class="container">
         <section class="about-me clearfix">
             <figure class="me-photo">
-                <img src="./images/John_Krasinski.jpg" alt="Luis Barriga" height="500px">
+                <img src="./images/John_Krasinski.jpg" alt="Luis Barriga" height="300px">
                 <figcaption class="photo-name">
                     Luis Barriga
                 </figcaption>
@@ -54,10 +55,10 @@
             </div>
         </section>
 
-        <section class="studies-formation">
-            <article class="studies">
-                <div>                    
-                    <div>
+        <section class="studies-formation clearfix">
+            <article class="studies col-8">
+                <div class="row">                    
+                    <div class="col-4">
                         <article class="applied-studies">
                             <h2>Estudios y formación</h3>
                             <header>
@@ -73,7 +74,7 @@
                             </figure>
                         </article>
                     </div>
-                    <div>
+                    <div class="col-4">
                         <article class="applied-studies">
                             <header>
                                 <h3>
@@ -88,7 +89,7 @@
                             </figure>
                         </article>
                     </div>
-                    <div>
+                    <div class="col-4">
                         <article class="applied-studies">
                             <header>
                                 <h3>
@@ -105,8 +106,8 @@
                     </div>
                 </div>
             </article>
-            <article class="formation">                                
-                    <div>
+            <article class="formation col-4">                                
+                    <div class="row">
                         <h2>Conocimientos</h2>
                         <ul class="applied-formation">
                             <li class="base rounded"><div class="barra rounded" style="width: 92%;"><span class="sans-serif">Programación C#</span></div></li>
