@@ -61,3 +61,15 @@ function borradoCampoDinamicoForm (event) {
 		padre.removeChild(campo);
 	}
 }
+var wordLen = 150; // Maximum word length
+comenatriosInput.addEventListener("change", function (event) {
+    var len = this.value.split(/[\s]+/);
+    if(len.length > wordLen){
+        alert("Lo sentimos, no puedes poner mas de  "+wordLen+" palabras en el area de texto.");
+        this.oldValue = this.value!=this.oldValue?this.value:this.oldValue;
+        this.value = this.oldValue?this.oldValue:"";
+        comenatriosInput.focus();
+        event.preventDefault();
+        return false;
+    }
+});

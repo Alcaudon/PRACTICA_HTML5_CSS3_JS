@@ -59,6 +59,7 @@ var acumulativeOffset = function (element) {
     return top;
 }
 
+
 var offsetQuienSoy = acumulativeOffset(document.getElementById('quien-soy')) - 50;
 var offsetEstudios = acumulativeOffset(document.getElementById('estudios')) - 50;
 var offsetExperiencia = acumulativeOffset(document.getElementById('experiencia')) - 50;
