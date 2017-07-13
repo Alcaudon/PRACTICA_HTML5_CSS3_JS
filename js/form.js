@@ -42,10 +42,22 @@ form.addEventListener("submit", function (event) {
 
 });
 
-seleccion3.addEventListener("change", function (event) {
-    alert ("The " + radio.value + " radio is selected.");
+seleccionInput.seleccion4.addEventListener("change", function (event) {
+    var input = document.createElement("input");    
+    input.setAttribute("type", "text",);
+    input.setAttribute("id", "campo-dinamico");
+    input.placeholder = "Pon aquí lo que quieras.."
+    document.getElementById("contact-radio").appendChild(input);
 });
 
-function OnChangeRadio (radio) {
-            alert ("The " + radio.value + " radio is selected.");
-        }
+seleccionInput.seleccion1.addEventListener ("change", borradoCampoDinamicoForm);
+seleccionInput.seleccion2.addEventListener ("change", borradoCampoDinamicoForm);
+seleccionInput.seleccion3.addEventListener ("change", borradoCampoDinamicoForm);
+
+function borradoCampoDinamicoForm (event) {        
+    campo = document.getElementById("campo-dinamico");	
+	if (campo){	
+		padre = campo.parentNode;
+		padre.removeChild(campo);
+	}
+}
