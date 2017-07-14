@@ -32,14 +32,21 @@ function scrollToElement (element) {
     document.body.scrollTop += jump;
 
     if (!element.lastJump || element.lastJump > Math.abs(jump)) {
-        element.lastJump = Math.abs(jump);
-
         setTimeout(function() {
+
+            element.lastJump = Math.abs(jump);
             scrollToElement(element);
         }, 40);
-    } 
+    } else {
+        element.lastJump = null;
+    }
 }
 
+function deleteActiveClass() {
+    for (var i = 0; i < navbarItems.length; i++) {
+        navbarItems[i].classList.remove('active');
+    }
+}
 
 var offsetQuienSoy = acumulativeOffset(document.getElementById('quien-soy')) - 50;
 var offsetEstudios = acumulativeOffset(document.getElementById('estudios')) - 50;
