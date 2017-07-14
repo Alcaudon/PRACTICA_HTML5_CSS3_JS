@@ -11,6 +11,7 @@ var seleccionInput = {
 };
 var comenatriosInput = document.getElementById("comments");
 
+var validacionTexto = true
 
 form.addEventListener("submit", function (event) {
     if (inputNombre.checkValidity() === false) {
@@ -38,38 +39,43 @@ form.addEventListener("submit", function (event) {
         alert("Por favor, introduce como me has conocido.");
         event.preventDefault();
         return false;
-    }
+    } 
 
-});
-
-seleccionInput.seleccion4.addEventListener("change", function (event) {
-    var input = document.createElement("input");    
-    input.setAttribute("type", "input",);
-    input.setAttribute("id", "campo-dinamico");
-    input.placeholder = "Pon aquí lo que quieras.."
-    document.getElementById("contact-radio").appendChild(input);
-});
-
-seleccionInput.seleccion1.addEventListener ("change", borradoCampoDinamicoForm);
-seleccionInput.seleccion2.addEventListener ("change", borradoCampoDinamicoForm);
-seleccionInput.seleccion3.addEventListener ("change", borradoCampoDinamicoForm);
-
-function borradoCampoDinamicoForm (event) {        
-    campo = document.getElementById("campo-dinamico");	
-	if (campo){	
-		padre = campo.parentNode;
-		padre.removeChild(campo);
-	}
-}
-var wordLen = 150; // Maximum word length
-comenatriosInput.addEventListener("change", function (event) {
-    var len = this.value.split(/[\s]+/);
-    if(len.length > wordLen){
+    if (validacionTexto === false) {
         alert("Lo sentimos, no puedes poner mas de  "+wordLen+" palabras en el area de texto.");
-        this.oldValue = this.value!=this.oldValue?this.value:this.oldValue;
-        this.value = this.oldValue?this.oldValue:"";
-        comenatriosInput.focus();
         event.preventDefault();
         return false;
-    }
+    } 
 });
+
+var wordLen = 150; // Maximum word length
+    comenatriosInput.addEventListener("change", function (event) {
+        validacionTexto= true;
+        var len = this.value.split(/[\s]+/);
+        if(len.length > wordLen){            
+            this.oldValue = this.value!=this.oldValue?this.value:this.oldValue;
+            this.value = this.oldValue?this.oldValue:"";
+            comenatriosInput.focus();
+            validacionTexto= false;
+        }
+    });
+
+seleccionInput.seleccion4.addEventListener("change", function (event) {
+        var input = document.createElement("input");    
+        input.setAttribute("type", "input",);
+        input.setAttribute("id", "campo-dinamico");
+        input.placeholder = "Pon aquí lo que quieras.."
+        document.getElementById("contact-radio").appendChild(input);
+    });
+
+    seleccionInput.seleccion1.addEventListener ("change", borradoCampoDinamicoForm);
+    seleccionInput.seleccion2.addEventListener ("change", borradoCampoDinamicoForm);
+    seleccionInput.seleccion3.addEventListener ("change", borradoCampoDinamicoForm);
+
+    function borradoCampoDinamicoForm (event) {        
+        campo = document.getElementById("campo-dinamico");	
+        if (campo){	
+            padre = campo.parentNode;
+            padre.removeChild(campo);
+        }
+    }
