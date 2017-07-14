@@ -5,8 +5,8 @@ for (var i = 0; i < navbarItems.length; i++) {
         var sectionToGo = this.getElementsByTagName('a')[0].href.split("#");
 
         deleteActiveClass();
-        this.classList.add('active')
-
+        this.classList.add('active');
+        
         if (sectionToGo.length === 2) {
             event.preventDefault();
             var goTo = sectionToGo[sectionToGo.length - 1];
@@ -32,31 +32,12 @@ function scrollToElement (element) {
     document.body.scrollTop += jump;
 
     if (!element.lastJump || element.lastJump > Math.abs(jump)) {
-        setTimeout(function() {
+        element.lastJump = Math.abs(jump);
 
-       element.lastJump = Math.abs(jump);
+        setTimeout(function() {
             scrollToElement(element);
         }, 40);
-    } else {
-        element.lastJump = null;
-    }
-}
-
-function deleteActiveClass() {
-    for (var i = 0; i < navbarItems.length; i++) {
-        navbarItems[i].classList.remove('active');
-    }
-}
-
-var acumulativeOffset = function (element) {
-    var top = 0;
-
-    do {
-        top += element.offsetTop || 0;
-        element = element.offsetParent;
-    } while (element);
-
-    return top;
+    } 
 }
 
 
