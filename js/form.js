@@ -62,7 +62,7 @@ var wordLen = 150; // Maximum word length
 
 seleccionInput.seleccion4.addEventListener("change", function (event) {
         var input = document.createElement("input");    
-        input.setAttribute("type", "input",);
+        input.setAttribute("type", "input");
         input.setAttribute("id", "campo-dinamico");
         input.placeholder = "Pon aquí lo que quieras.."
         document.getElementById("contact-radio").appendChild(input);

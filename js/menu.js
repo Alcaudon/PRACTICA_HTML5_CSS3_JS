@@ -1,9 +1,8 @@
 var navbarItems = document.getElementsByClassName('navbar-item');
-
+console.log("luis");
 for (var i = 0; i < navbarItems.length; i++) {
-    navbarItems[i].addEventListener('click', function (event) {
+    navbarItems[i].addEventListener('select', function (event) {
         var sectionToGo = this.getElementsByTagName('a')[0].href.split("#");
-
         deleteActiveClass();
         this.classList.add('active');
         
@@ -21,8 +20,7 @@ function getElementByIdAndScroll (id) {
         elem = document.getElementsByClassName('header')[0];
     } else {
         elem = document.getElementById(id);
-    }
-
+    }    
     scrollToElement(elem);
 }
 
@@ -109,19 +107,6 @@ function changeMenuStyle(event) {
         }
 
         deleteActiveClass();
-        document.querySelector("a[href$='experiencia']").parentNode.classList.add("active");
-        
-    } else if (pageOffset >= offsetExperiencia) {
-        if (!previous || previous !== 5) {
-            previous = 5;
-        } else if (previous === 5){
-            return false;
-        }
-
-        deleteActiveClass();
-        document.querySelector("a[href$='sobre-mi]").parentNode.classList.add("active");
-        
-    }        
-
-    
+        document.querySelector("a[href$='experiencia']").parentNode.classList.add("active");        
+    }       
 }
