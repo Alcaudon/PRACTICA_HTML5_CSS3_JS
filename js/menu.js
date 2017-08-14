@@ -1,7 +1,7 @@
 var navbarItems = document.getElementsByClassName('navbar-item');
-console.log("luis");
+
 for (var i = 0; i < navbarItems.length; i++) {
-    navbarItems[i].addEventListener('select', function (event) {
+    navbarItems[i].addEventListener('click', function (event) {
         var sectionToGo = this.getElementsByTagName('a')[0].href.split("#");
         deleteActiveClass();
         this.classList.add('active');
@@ -12,6 +12,12 @@ for (var i = 0; i < navbarItems.length; i++) {
             getElementByIdAndScroll(goTo);
         }
     });
+}
+
+function deleteActiveClass() {
+    for (var i = 0; i < navbarItems.length; i++) {
+        navbarItems[i].classList.remove('active');
+    }
 }
 
 function getElementByIdAndScroll (id) {
@@ -40,11 +46,7 @@ function scrollToElement (element) {
     }
 }
 
-function deleteActiveClass() {
-    for (var i = 0; i < navbarItems.length; i++) {
-        navbarItems[i].classList.remove('active');
-    }
-}
+
 
 var acumulativeOffset = function (element) {
     var top = 0;
