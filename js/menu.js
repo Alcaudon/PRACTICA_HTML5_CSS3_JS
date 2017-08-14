@@ -33,12 +33,12 @@ function getElementByIdAndScroll (id) {
 function scrollToElement (element) {
     var jump = parseInt(element.getBoundingClientRect().top * 0.3);
 
-    document.body.scrollTop += jump;
+    var scrollingElement = document.scrollingElement || document.documentElement;     
+    scrollingElement.scrollTop += jump;
 
     if (!element.lastJump || element.lastJump > Math.abs(jump)) {
-        setTimeout(function() {
-
-            element.lastJump = Math.abs(jump);
+        element.lastJump = Math.abs(jump);
+        setTimeout(function() {            
             scrollToElement(element);
         }, 40);
     } else {
