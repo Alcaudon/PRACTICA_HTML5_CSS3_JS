@@ -51,7 +51,7 @@ form.addEventListener("submit", function (event) {
 var wordLen = 150; // Maximum word length
     comenatriosInput.addEventListener("change", function (event) {
         validacionTexto= true;
-        var len = this.value.split(/[\s]+/);
+        var len = this.value.trim().split(/[\s]+/);
         if(len.length > wordLen){            
             this.oldValue = this.value!=this.oldValue?this.value:this.oldValue;
             this.value = this.oldValue?this.oldValue:"";
